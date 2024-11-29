@@ -3,7 +3,7 @@ import { Label } from "@/components/ui/label";
 import { Github, Globe } from "lucide-react";
 import Link from "next/link";
 
-const Login = async () => {
+export default function Login() {
   return (
     <div className="mt-10 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white border border-[#121212] dark:bg-black">
       <h2 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200">
@@ -17,8 +17,7 @@ const Login = async () => {
           type="email"
           name="email"
         />
-
-        <Label htmlFor="email">Password</Label>
+        <Label htmlFor="password">Password</Label>
         <Input
           id="password"
           placeholder="*************"
@@ -26,18 +25,15 @@ const Login = async () => {
           name="password"
           className="mb-6"
         />
-
         <button className="bg-black text-white w-full h-10 rounded-md font-medium">
           Login &rarr;
         </button>
-
         <p className="text-right text-neutral-600 text-sm max-w-sm mt-4 dark:text-neutral-300">
-          Don&apos;t have account?{" "}
+          Don&apos;t have an account?{" "}
           <span className="hover:underline">
             <Link href="/register">Register</Link>
           </span>
         </p>
-
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       </form>
       <form>
@@ -65,6 +61,4 @@ const Login = async () => {
       </form>
     </div>
   );
-};
-
-export default Login;
+}
