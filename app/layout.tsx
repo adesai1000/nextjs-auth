@@ -1,4 +1,4 @@
-// app/layout.tsx
+import Navbar from "@/components/auth/navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -13,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
